@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">COLORVERSE</string>
+    <string name="title_activity_main">COLORVERSE</string>
+    <string name="package_name">com.amir.colorverse</string>
+    <string name="custom_url_scheme">com.amir.colorverse</string>
+</resources>
