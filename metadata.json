@@ -1,0 +1,6 @@
+{
+  "name": "COLORVERSE",
+  "description": "Every picture has a story. A premium interactive colouring studio and digital art gallery across six curated worlds.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

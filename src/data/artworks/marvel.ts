@@ -1,0 +1,298 @@
+import type { ArtworkDefinition } from '../../types/colorverse';
+
+export const MARVEL_ARTWORKS: ArtworkDefinition[] = [
+  {
+    id: 'marvel-01',
+    categoryId: 'marvel',
+    levelNumber: 1,
+    title: 'THE ARMOR AWAKENS',
+    character: 'Iron Man',
+    source: 'Movie: Iron Man (2008)',
+    punchline: 'Built in a cave. Born to change the world.',
+    difficulty: 'Advanced',
+    isPremium: true,
+    viewBox: '0 0 800 1000',
+    backgroundHex: '#12131A',
+    palette: [
+      { id: 1, name: 'Midnight Forge', hex: '#1B1E2B' },
+      { id: 2, name: 'Reactor Halo', hex: '#283A52' },
+      { id: 3, name: 'Hot-Rod Crimson', hex: '#B91C2E' },
+      { id: 4, name: 'Deep Carmine', hex: '#7F1221' },
+      { id: 5, name: 'Titanium Gold', hex: '#E4B84D' },
+      { id: 6, name: 'Burnished Amber', hex: '#B88424' },
+      { id: 7, name: 'Arc Cyan', hex: '#6EE7FF' },
+      { id: 8, name: 'Plasma White', hex: '#E0F9FF' },
+    ],
+    regions: [
+      // Background & workshop aura
+      { id: 'im-bg-top', colorId: 1, d: 'M 0 0 L 800 0 L 800 440 L 0 440 Z', labelX: 110, labelY: 110 },
+      { id: 'im-bg-bot', colorId: 1, d: 'M 0 440 L 800 440 L 800 1000 L 0 1000 Z', labelX: 700, labelY: 910 },
+      { id: 'im-halo-outer', colorId: 2, d: 'M 400 90 C 595 90 730 230 730 420 C 730 610 595 750 400 750 C 205 750 70 610 70 420 C 70 230 205 90 400 90 Z', labelX: 155, labelY: 280 },
+      { id: 'im-halo-inner', colorId: 2, d: 'M 400 155 C 555 155 665 268 665 420 C 665 572 555 685 400 685 C 245 685 135 572 135 420 C 135 268 245 155 400 155 Z', labelX: 615, labelY: 295 },
+      // Shoulders & Pauldrons
+      { id: 'im-sh-l-outer', colorId: 3, d: 'M 85 735 C 110 640 190 590 280 578 L 290 715 L 125 815 Z', labelX: 190, labelY: 690 },
+      { id: 'im-sh-r-outer', colorId: 3, d: 'M 715 735 C 690 640 610 590 520 578 L 510 715 L 675 815 Z', labelX: 610, labelY: 690 },
+      { id: 'im-sh-l-trim', colorId: 5, d: 'M 125 815 L 290 715 L 265 880 L 95 930 Z', labelX: 195, labelY: 830 },
+      { id: 'im-sh-r-trim', colorId: 5, d: 'M 675 815 L 510 715 L 535 880 L 705 930 Z', labelX: 605, labelY: 830 },
+      // Torso armor plates
+      { id: 'im-chest-l', colorId: 3, d: 'M 280 578 L 400 620 L 400 845 L 245 810 Z', labelX: 315, labelY: 705 },
+      { id: 'im-chest-r', colorId: 3, d: 'M 520 578 L 400 620 L 400 845 L 555 810 Z', labelX: 485, labelY: 705 },
+      { id: 'im-ab-center', colorId: 4, d: 'M 245 810 L 400 845 L 555 810 L 520 980 L 280 980 Z', labelX: 400, labelY: 920 },
+      { id: 'im-collar', colorId: 4, d: 'M 280 578 L 335 535 L 465 535 L 520 578 L 400 620 Z', labelX: 400, labelY: 572 },
+      // Neck
+      { id: 'im-neck', colorId: 6, d: 'M 335 490 L 465 490 L 465 545 L 335 545 Z', labelX: 400, labelY: 530, labelSize: 13 },
+      // Helmet Crimson Dome & Cheeks
+      { id: 'im-dome-top', colorId: 3, d: 'M 262 275 C 270 150 340 115 400 115 C 460 115 530 150 538 275 L 495 245 L 400 220 L 305 245 Z', labelX: 400, labelY: 168 },
+      { id: 'im-side-l', colorId: 4, d: 'M 262 275 L 298 258 L 308 445 L 278 468 L 252 380 Z', labelX: 280, labelY: 365 },
+      { id: 'im-side-r', colorId: 4, d: 'M 538 275 L 502 258 L 492 445 L 522 468 L 548 380 Z', labelX: 520, labelY: 365 },
+      { id: 'im-jaw-l', colorId: 3, d: 'M 278 468 L 308 445 L 360 515 L 330 535 Z', labelX: 318, labelY: 492 },
+      { id: 'im-jaw-r', colorId: 3, d: 'M 522 468 L 492 445 L 440 515 L 470 535 Z', labelX: 482, labelY: 492 },
+      // Gold Faceplate
+      { id: 'im-forehead', colorId: 5, d: 'M 305 245 L 400 220 L 495 245 L 485 322 L 400 335 L 315 322 Z', labelX: 400, labelY: 282 },
+      { id: 'im-face-mid', colorId: 5, d: 'M 315 322 L 400 335 L 485 322 L 475 438 L 400 462 L 325 438 Z', labelX: 400, labelY: 398 },
+      { id: 'im-chin-plate', colorId: 6, d: 'M 325 438 L 400 462 L 475 438 L 442 512 L 358 512 Z', labelX: 400, labelY: 486 },
+      // Glowing Eyes
+      { id: 'im-eye-l', colorId: 7, d: 'M 318 332 L 382 346 L 372 365 L 324 352 Z', labelX: 350, labelY: 349, labelSize: 13 },
+      { id: 'im-eye-r', colorId: 7, d: 'M 482 332 L 418 346 L 428 365 L 476 352 Z', labelX: 450, labelY: 349, labelSize: 13 },
+      // Arc Reactor Chest Core
+      { id: 'im-arc-ring', colorId: 6, d: 'M 400 662 C 446 662 482 698 482 744 C 482 790 446 826 400 826 C 354 826 318 790 318 744 C 318 698 354 662 400 662 Z', labelX: 332, labelY: 762, labelSize: 13 },
+      { id: 'im-arc-glow', colorId: 7, d: 'M 400 688 C 431 688 456 713 456 744 C 456 775 431 800 400 800 C 369 800 344 775 344 744 C 344 713 369 688 400 688 Z', labelX: 442, labelY: 760, labelSize: 13 },
+      { id: 'im-arc-core', colorId: 8, d: 'M 400 714 C 417 714 430 727 430 744 C 430 761 417 774 400 774 C 383 774 370 761 370 744 C 370 727 383 714 400 714 Z', labelX: 400, labelY: 745, labelSize: 13 },
+    ],
+    detailStrokes: [
+      'M 365 446 L 435 446',
+      'M 358 140 L 358 225',
+      'M 442 140 L 442 225',
+      'M 400 662 L 400 688 M 400 800 L 400 826 M 318 744 L 344 744 M 456 744 L 482 744',
+      'M 290 660 L 330 695 M 510 660 L 470 695',
+    ],
+  },
+  {
+    id: 'marvel-02',
+    categoryId: 'marvel',
+    levelNumber: 2,
+    title: 'THE FACE OF DOOM',
+    character: 'Doctor Doom',
+    source: 'Marvel Universe',
+    punchline: 'Fear is temporary. Doom is eternal.',
+    difficulty: 'Advanced',
+    isPremium: true,
+    viewBox: '0 0 800 1000',
+    backgroundHex: '#101412',
+    palette: [
+      { id: 1, name: 'Latverian Night', hex: '#141B19' },
+      { id: 2, name: 'Emerald Cloak', hex: '#1B5E3F' },
+      { id: 3, name: 'Deep Sovereign Green', hex: '#0F3B27' },
+      { id: 4, name: 'Forged Steel', hex: '#94A3B8' },
+      { id: 5, name: 'Shadow Iron', hex: '#4B5563' },
+      { id: 6, name: 'Imperial Gold', hex: '#D4AF37' },
+      { id: 7, name: 'Arcane Flame', hex: '#34D399' },
+      { id: 8, name: 'Abyssal Shadow', hex: '#0B0F0E' },
+    ],
+    regions: [
+      { id: 'dm-bg-l', colorId: 1, d: 'M 0 0 L 400 0 L 400 1000 L 0 1000 Z', labelX: 90, labelY: 140 },
+      { id: 'dm-bg-r', colorId: 1, d: 'M 400 0 L 800 0 L 800 1000 L 400 1000 Z', labelX: 710, labelY: 140 },
+      { id: 'dm-aura', colorId: 7, d: 'M 400 72 L 520 260 L 660 210 L 570 390 L 670 530 L 400 490 L 130 530 L 230 390 L 140 210 L 280 260 Z', labelX: 605, labelY: 265 },
+      // Hood outer silhouette
+      { id: 'dm-hood-l', colorId: 2, d: 'M 400 110 C 235 120 155 260 150 455 L 250 560 L 295 450 C 280 320 315 220 400 205 Z', labelX: 225, labelY: 340 },
+      { id: 'dm-hood-r', colorId: 2, d: 'M 400 110 C 565 120 645 260 650 455 L 550 560 L 505 450 C 520 320 485 220 400 205 Z', labelX: 575, labelY: 340 },
+      { id: 'dm-hood-inner', colorId: 8, d: 'M 400 205 C 315 220 278 320 292 458 L 400 580 L 508 458 C 522 320 485 220 400 205 Z', labelX: 400, labelY: 235, labelSize: 13 },
+      // Cloak & shoulders
+      { id: 'dm-cloak-l', colorId: 3, d: 'M 150 455 L 250 560 L 210 980 L 40 980 L 75 640 Z', labelX: 140, labelY: 780 },
+      { id: 'dm-cloak-r', colorId: 3, d: 'M 650 455 L 550 560 L 590 980 L 760 980 L 725 640 Z', labelX: 660, labelY: 780 },
+      { id: 'dm-tunic', colorId: 2, d: 'M 250 560 L 550 560 L 590 980 L 210 980 Z', labelX: 400, labelY: 855 },
+      // Armored breastplate
+      { id: 'dm-armor-l', colorId: 5, d: 'M 255 585 L 400 625 L 400 795 L 270 760 Z', labelX: 332, labelY: 695 },
+      { id: 'dm-armor-r', colorId: 5, d: 'M 545 585 L 400 625 L 400 795 L 530 760 Z', labelX: 468, labelY: 695 },
+      // Gold Clasp Medallions & Chain
+      { id: 'dm-clasp-l', colorId: 6, d: 'M 258 610 C 282 610 300 628 300 652 C 300 676 282 694 258 694 C 234 694 216 676 216 652 C 216 628 234 610 258 610 Z', labelX: 258, labelY: 652, labelSize: 14 },
+      { id: 'dm-clasp-r', colorId: 6, d: 'M 542 610 C 566 610 584 628 584 652 C 584 676 566 694 542 694 C 518 694 500 676 500 652 C 500 628 518 610 542 610 Z', labelX: 542, labelY: 652, labelSize: 14 },
+      { id: 'dm-chain', colorId: 6, d: 'M 294 652 Q 400 715 506 652 L 506 676 Q 400 738 294 676 Z', labelX: 400, labelY: 696, labelSize: 13 },
+      // Iconic Iron Mask
+      { id: 'dm-mask-brow', colorId: 4, d: 'M 312 292 L 400 262 L 488 292 L 478 358 L 400 375 L 322 358 Z', labelX: 400, labelY: 318 },
+      { id: 'dm-mask-cheek-l', colorId: 4, d: 'M 312 358 L 385 375 L 378 468 L 315 448 Z', labelX: 348, labelY: 416 },
+      { id: 'dm-mask-cheek-r', colorId: 5, d: 'M 488 358 L 415 375 L 422 468 L 485 448 Z', labelX: 452, labelY: 416 },
+      { id: 'dm-mask-nose', colorId: 5, d: 'M 385 352 L 415 352 L 420 450 L 380 450 Z', labelX: 400, labelY: 404, labelSize: 13 },
+      { id: 'dm-mask-grille', colorId: 4, d: 'M 332 456 L 468 456 L 448 538 L 352 538 Z', labelX: 400, labelY: 498 },
+      // Glowing eyes behind steel slits
+      { id: 'dm-eye-l', colorId: 7, d: 'M 326 358 L 378 370 L 372 385 L 330 376 Z', labelX: 353, labelY: 372, labelSize: 12 },
+      { id: 'dm-eye-r', colorId: 7, d: 'M 474 358 L 422 370 L 428 385 L 470 376 Z', labelX: 447, labelY: 372, labelSize: 12 },
+      // Arcane energy orbs on hands
+      { id: 'dm-belt', colorId: 6, d: 'M 255 785 L 545 785 L 545 826 L 255 826 Z', labelX: 400, labelY: 806, labelSize: 14 },
+    ],
+    detailStrokes: [
+      'M 355 462 L 355 532 M 378 462 L 378 532 M 400 462 L 400 532 M 422 462 L 422 532 M 445 462 L 445 532',
+      'M 335 496 L 465 496',
+      'M 328 310 L 340 310 M 460 310 L 472 310',
+      'M 400 625 L 400 785',
+    ],
+  },
+  {
+    id: 'marvel-03',
+    categoryId: 'marvel',
+    levelNumber: 3,
+    title: 'WEB OVER MANHATTAN',
+    character: 'Spider-Man',
+    source: 'Marvel Universe',
+    punchline: 'With great power comes the weight of the skyline.',
+    difficulty: 'Medium',
+    isPremium: true,
+    viewBox: '0 0 800 1000',
+    backgroundHex: '#111827',
+    palette: [
+      { id: 1, name: 'Twilight Sky', hex: '#1E293B' },
+      { id: 2, name: 'Sunset Horizon', hex: '#E06D53' },
+      { id: 3, name: 'Scarlet Suit', hex: '#DC2626' },
+      { id: 4, name: 'Shadow Crimson', hex: '#991B1B' },
+      { id: 5, name: 'Cobalt Web', hex: '#1D4ED8' },
+      { id: 6, name: 'Obsidian Trim', hex: '#111827' },
+      { id: 7, name: 'Lens White', hex: '#F8FAFC' },
+    ],
+    regions: [
+      { id: 'sp-sky-top', colorId: 1, d: 'M 0 0 L 800 0 L 800 520 L 0 520 Z', labelX: 110, labelY: 110 },
+      { id: 'sp-sky-glow', colorId: 2, d: 'M 0 520 L 800 520 L 800 760 L 0 760 Z', labelX: 110, labelY: 600 },
+      { id: 'sp-city-l', colorId: 6, d: 'M 0 650 L 95 650 L 95 570 L 175 570 L 175 720 L 245 720 L 245 1000 L 0 1000 Z', labelX: 90, labelY: 850 },
+      { id: 'sp-city-r', colorId: 6, d: 'M 555 710 L 635 710 L 635 550 L 715 550 L 715 620 L 800 620 L 800 1000 L 555 1000 Z', labelX: 700, labelY: 850 },
+      // Suit shoulders & blue side panels
+      { id: 'sp-blue-l', colorId: 5, d: 'M 155 680 C 185 595 250 565 305 560 L 315 960 L 175 960 Z', labelX: 235, labelY: 790 },
+      { id: 'sp-blue-r', colorId: 5, d: 'M 645 680 C 615 595 550 565 495 560 L 485 960 L 625 960 Z', labelX: 565, labelY: 790 },
+      { id: 'sp-red-chest', colorId: 3, d: 'M 305 560 L 495 560 L 485 960 L 315 960 Z', labelX: 400, labelY: 830 },
+      { id: 'sp-neck', colorId: 4, d: 'M 342 495 L 458 495 L 478 565 L 322 565 Z', labelX: 400, labelY: 532 },
+      // Iconic Mask Silhouette
+      { id: 'sp-head-top', colorId: 3, d: 'M 255 310 C 260 165 335 125 400 125 C 465 125 540 165 545 310 L 400 340 Z', labelX: 400, labelY: 215 },
+      { id: 'sp-head-l', colorId: 3, d: 'M 255 310 L 400 340 L 400 520 C 312 515 262 435 255 310 Z', labelX: 325, labelY: 435 },
+      { id: 'sp-head-r', colorId: 4, d: 'M 545 310 L 400 340 L 400 520 C 488 515 538 435 545 310 Z', labelX: 475, labelY: 435 },
+      // Black Eye Frames
+      { id: 'sp-frame-l', colorId: 6, d: 'M 278 292 C 326 300 370 330 385 378 C 340 398 292 380 278 292 Z', labelX: 300, labelY: 312, labelSize: 12 },
+      { id: 'sp-frame-r', colorId: 6, d: 'M 522 292 C 474 300 430 330 415 378 C 460 398 508 380 522 292 Z', labelX: 500, labelY: 312, labelSize: 12 },
+      // Crisp White Lenses
+      { id: 'sp-lens-l', colorId: 7, d: 'M 294 312 C 330 318 358 340 370 370 C 336 382 304 368 294 312 Z', labelX: 332, labelY: 348, labelSize: 14 },
+      { id: 'sp-lens-r', colorId: 7, d: 'M 506 312 C 470 318 442 340 430 370 C 464 382 496 368 506 312 Z', labelX: 468, labelY: 348, labelSize: 14 },
+      // Chest Spider Emblem
+      { id: 'sp-emblem', colorId: 6, d: 'M 400 635 L 424 670 L 400 735 L 376 670 Z', labelX: 400, labelY: 682, labelSize: 13 },
+      // Full Moon behind
+      { id: 'sp-moon', colorId: 7, d: 'M 650 110 C 698 110 735 147 735 195 C 735 243 698 280 650 280 C 602 280 565 243 565 195 C 565 147 602 110 650 110 Z', labelX: 650, labelY: 195 },
+      // Web corner accents
+      { id: 'sp-web-corner', colorId: 5, d: 'M 0 0 L 235 0 Q 130 130 0 235 Z', labelX: 70, labelY: 70 },
+    ],
+    detailStrokes: [
+      'M 400 125 L 400 520',
+      'M 400 340 L 270 215 M 400 340 L 530 215 M 400 340 L 285 455 M 400 340 L 515 455',
+      'M 310 195 Q 400 225 490 195 M 275 260 Q 400 285 525 260 M 305 445 Q 400 420 495 445',
+      'M 380 665 L 335 630 M 382 685 L 330 695 M 385 705 L 345 745',
+      'M 420 665 L 465 630 M 418 685 L 470 695 M 415 705 L 455 745',
+    ],
+  },
+  {
+    id: 'marvel-04',
+    categoryId: 'marvel',
+    levelNumber: 4,
+    title: 'STORM OF ASGARD',
+    character: 'Thor',
+    source: 'Marvel Universe',
+    punchline: 'Forged in a dying star. Wielded by the worthy.',
+    difficulty: 'Advanced',
+    isPremium: true,
+    viewBox: '0 0 800 1000',
+    backgroundHex: '#0F172A',
+    palette: [
+      { id: 1, name: 'Bifrost Storm', hex: '#172554' },
+      { id: 2, name: 'Thunder Cloud', hex: '#334155' },
+      { id: 3, name: 'Uru Silver', hex: '#CBD5E1' },
+      { id: 4, name: 'Forged Gunmetal', hex: '#64748B' },
+      { id: 5, name: 'Asgardian Crimson', hex: '#B91C1C' },
+      { id: 6, name: 'Odin Leather', hex: '#78350F' },
+      { id: 7, name: 'Lightning Cyan', hex: '#38BDF8' },
+      { id: 8, name: 'Starlight Gold', hex: '#FACC15' },
+    ],
+    regions: [
+      { id: 'th-sky', colorId: 1, d: 'M 0 0 L 800 0 L 800 1000 L 0 1000 Z', labelX: 110, labelY: 120 },
+      { id: 'th-cloud-l', colorId: 2, d: 'M 0 0 L 340 0 C 310 140 220 220 0 245 Z', labelX: 120, labelY: 85 },
+      { id: 'th-cloud-r', colorId: 2, d: 'M 800 0 L 460 0 C 490 140 580 220 800 245 Z', labelX: 680, labelY: 85 },
+      // Lightning Bolts
+      { id: 'th-bolt-l', colorId: 7, d: 'M 225 40 L 140 280 L 210 280 L 135 510 L 270 250 L 200 250 L 275 40 Z', labelX: 205, labelY: 205 },
+      { id: 'th-bolt-r', colorId: 7, d: 'M 575 40 L 660 280 L 590 280 L 665 510 L 530 250 L 600 250 L 525 40 Z', labelX: 595, labelY: 205 },
+      // Flowing Red Cape
+      { id: 'th-cape-l', colorId: 5, d: 'M 140 510 L 340 480 L 285 950 L 75 950 Z', labelX: 195, labelY: 760 },
+      { id: 'th-cape-r', colorId: 5, d: 'M 660 510 L 460 480 L 515 950 L 725 950 Z', labelX: 605, labelY: 760 },
+      // Mjolnir Hammer Head
+      { id: 'th-head-top', colorId: 3, d: 'M 255 215 L 545 215 L 585 268 L 215 268 Z', labelX: 400, labelY: 242 },
+      { id: 'th-head-front', colorId: 4, d: 'M 215 268 L 585 268 L 585 455 L 215 455 Z', labelX: 400, labelY: 362 },
+      { id: 'th-head-bevel-l', colorId: 3, d: 'M 175 298 L 215 268 L 215 455 L 175 425 Z', labelX: 195, labelY: 362, labelSize: 13 },
+      { id: 'th-head-bevel-r', colorId: 3, d: 'M 625 298 L 585 268 L 585 455 L 625 425 Z', labelX: 605, labelY: 362, labelSize: 13 },
+      { id: 'th-head-bot', colorId: 3, d: 'M 215 455 L 585 455 L 545 502 L 255 502 Z', labelX: 400, labelY: 478 },
+      // Norse Triquetra Accent
+      { id: 'th-rune', colorId: 8, d: 'M 400 296 L 456 362 L 400 428 L 344 362 Z', labelX: 400, labelY: 362 },
+      // Handle & Leather Wraps
+      { id: 'th-collar', colorId: 8, d: 'M 355 502 L 445 502 L 440 546 L 360 546 Z', labelX: 400, labelY: 524, labelSize: 13 },
+      { id: 'th-grip-1', colorId: 6, d: 'M 366 546 L 434 546 L 434 640 L 366 640 Z', labelX: 400, labelY: 593 },
+      { id: 'th-grip-2', colorId: 6, d: 'M 366 640 L 434 640 L 434 735 L 366 735 Z', labelX: 400, labelY: 688 },
+      { id: 'th-grip-3', colorId: 6, d: 'M 366 735 L 434 735 L 434 825 L 366 825 Z', labelX: 400, labelY: 780 },
+      { id: 'th-pommel', colorId: 3, d: 'M 352 825 L 448 825 L 436 875 L 364 875 Z', labelX: 400, labelY: 850, labelSize: 14 },
+      // Leather Strap
+      { id: 'th-strap', colorId: 6, d: 'M 382 875 C 335 925 360 970 400 970 C 440 970 465 925 418 875 L 400 935 Z', labelX: 400, labelY: 950, labelSize: 13 },
+      // Cracked Pedestal Stone
+      { id: 'th-rock', colorId: 2, d: 'M 110 920 L 295 880 L 505 880 L 690 920 L 760 1000 L 40 1000 Z', labelX: 240, labelY: 958 },
+    ],
+    detailStrokes: [
+      'M 235 288 L 565 288 M 235 435 L 565 435',
+      'M 366 585 L 434 605 M 366 680 L 434 700 M 366 770 L 434 790',
+    ],
+  },
+  {
+    id: 'marvel-05',
+    categoryId: 'marvel',
+    levelNumber: 5,
+    title: 'KING OF WAKANDA',
+    character: 'Black Panther',
+    source: 'Wakanda Forever',
+    punchline: 'A crown forged from vibranium and legacy.',
+    difficulty: 'Medium',
+    isPremium: true,
+    viewBox: '0 0 800 1000',
+    backgroundHex: '#0F0D18',
+    palette: [
+      { id: 1, name: 'Wakanda Night', hex: '#141124' },
+      { id: 2, name: 'Vibranium Violet', hex: '#7C3AED' },
+      { id: 3, name: 'Kinetic Lavender', hex: '#C4B5FD' },
+      { id: 4, name: 'Panther Obsidian', hex: '#1F2430' },
+      { id: 5, name: 'Carbon Weave', hex: '#333C4D' },
+      { id: 6, name: 'Claw Silver', hex: '#E2E8F0' },
+      { id: 7, name: 'Royal Gold', hex: '#D4AF37' },
+    ],
+    regions: [
+      { id: 'bp-bg', colorId: 1, d: 'M 0 0 L 800 0 L 800 1000 L 0 1000 Z', labelX: 100, labelY: 100 },
+      { id: 'bp-ring-outer', colorId: 2, d: 'M 400 115 C 580 115 715 250 715 430 C 715 610 580 745 400 745 C 220 745 85 610 85 430 C 85 250 220 115 400 115 Z', labelX: 165, labelY: 265 },
+      { id: 'bp-ring-inner', colorId: 1, d: 'M 400 155 C 555 155 675 275 675 430 C 675 585 555 705 400 705 C 245 705 125 585 125 430 C 125 275 245 155 400 155 Z', labelX: 605, labelY: 295 },
+      // Shoulders & Suit
+      { id: 'bp-sh-l', colorId: 4, d: 'M 110 735 C 155 620 235 580 320 570 L 320 960 L 95 960 Z', labelX: 210, labelY: 790 },
+      { id: 'bp-sh-r', colorId: 4, d: 'M 690 735 C 645 620 565 580 480 570 L 480 960 L 705 960 Z', labelX: 590, labelY: 790 },
+      { id: 'bp-chest', colorId: 5, d: 'M 320 570 L 480 570 L 480 960 L 320 960 Z', labelX: 400, labelY: 850 },
+      // Vibranium Necklace Claws
+      { id: 'bp-claw-1', colorId: 6, d: 'M 255 615 L 285 615 L 270 695 Z', labelX: 270, labelY: 645, labelSize: 12 },
+      { id: 'bp-claw-2', colorId: 6, d: 'M 315 645 L 350 645 L 332 738 Z', labelX: 332, labelY: 682, labelSize: 12 },
+      { id: 'bp-claw-3', colorId: 6, d: 'M 380 658 L 420 658 L 400 765 Z', labelX: 400, labelY: 698, labelSize: 13 },
+      { id: 'bp-claw-4', colorId: 6, d: 'M 450 645 L 485 645 L 468 738 Z', labelX: 468, labelY: 682, labelSize: 12 },
+      { id: 'bp-claw-5', colorId: 6, d: 'M 515 615 L 545 615 L 530 695 Z', labelX: 530, labelY: 645, labelSize: 12 },
+      // Panther Ears
+      { id: 'bp-ear-l', colorId: 5, d: 'M 262 280 L 252 155 L 338 228 Z', labelX: 282, labelY: 222 },
+      { id: 'bp-ear-r', colorId: 5, d: 'M 538 280 L 548 155 L 462 228 Z', labelX: 518, labelY: 222 },
+      // Mask Facets
+      { id: 'bp-crown', colorId: 4, d: 'M 338 228 L 400 205 L 462 228 L 448 320 L 400 345 L 352 320 Z', labelX: 400, labelY: 274 },
+      { id: 'bp-cheek-l', colorId: 4, d: 'M 262 280 L 352 320 L 340 482 L 268 422 Z', labelX: 306, labelY: 382 },
+      { id: 'bp-cheek-r', colorId: 5, d: 'M 538 280 L 448 320 L 460 482 L 532 422 Z', labelX: 494, labelY: 382 },
+      { id: 'bp-snout', colorId: 5, d: 'M 352 320 L 400 345 L 448 320 L 460 482 L 400 548 L 340 482 Z', labelX: 400, labelY: 448 },
+      // Silver Eyes & Kinetic Tribal Lines
+      { id: 'bp-eye-l', colorId: 6, d: 'M 294 345 L 368 370 L 354 392 L 300 374 Z', labelX: 332, labelY: 369, labelSize: 12 },
+      { id: 'bp-eye-r', colorId: 6, d: 'M 506 345 L 432 370 L 446 392 L 500 374 Z', labelX: 468, labelY: 369, labelSize: 12 },
+      { id: 'bp-kinetic-l', colorId: 3, d: 'M 155 775 L 265 730 L 275 765 L 165 810 Z', labelX: 215, labelY: 772, labelSize: 13 },
+      { id: 'bp-kinetic-r', colorId: 3, d: 'M 645 775 L 535 730 L 525 765 L 635 810 Z', labelX: 585, labelY: 772, labelSize: 13 },
+      { id: 'bp-gold-crest', colorId: 7, d: 'M 382 238 L 400 218 L 418 238 L 400 288 Z', labelX: 400, labelY: 252, labelSize: 12 },
+    ],
+    detailStrokes: [
+      'M 365 480 L 400 508 L 435 480',
+      'M 315 280 L 350 302 M 485 280 L 450 302',
+      'M 230 615 Q 400 680 570 615',
+    ],
+  },
+];
