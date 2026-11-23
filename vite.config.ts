@@ -27,6 +27,34 @@ export default defineConfig(() => {
           }
         },
       },
+      {
+        name: 'serve-release-apk-downloads',
+        apply: 'serve',
+        configureServer(server) {
+          server.middlewares.use((req, res, next) => {
+            const urlPath = (req.url ?? '').split('?')[0];
+            if (!urlPath.startsWith('/releases/') || !urlPath.endsWith('.apk')) {
+              return next();
+            }
+            const fileName = path.basename(urlPath);
+            const apkPath = path.resolve(__dirname, 'releases', fileName);
+            if (!fs.existsSync(apkPath) || !fs.statSync(apkPath).isFile()) {
+              return next();
+            }
+            const stat = fs.statSync(apkPath);
+            res.setHeader('Content-Type', 'application/vnd.android.package-archive');
+            res.setHeader('Content-Disposition', `attachment; filename="${fileName}"`);
+            res.setHeader('Content-Length', String(stat.size));
+            res.setHeader('Cache-Control', 'no-cache');
+            if (req.method === 'HEAD') {
+              res.statusCode = 200;
+              res.end();
+              return;
+            }
+            fs.createReadStream(apkPath).pipe(res);
+          });
+        },
+      },
     ],
     resolve: {
       alias: {
